@@ -1,0 +1,55 @@
+<html>
+<MARQUEE BEHAVIOR="ALTERNATE">
+<IMG height=100 src="320.gif" width=100 border=4> <IMG height=80 src="P1.png" width=700 border=4> <BR>
+</MARQUEE>
+<head>
+	<CENTER><FONT FACE="JOKERMAN" SIZE=6 COLOR=green>
+PLEASE FILL THE FORM BELOW TO HAVE ACCESS TO THE COMPANY
+</FONT></CENTER>
+<title> Login Form Validation</title>
+<script language="JavaScript">
+window.alert("Welcome to CHAMBERLAYNE GLOBAL CONCEPT LIMITED")
+	function validateForm(objForm){
+		 // Make quick reference to our field!
+	var username = document.getElementById('username');
+	var password = document.getElementById('password');
+		 
+		 if(objForm.username.value.length==0){
+		 alert("Please enter the user name!");
+		 objForm.username.focus();
+		 return false;
+		 }
+		 if(objForm.password.value.length==0){
+		 alert("Please enter the password!");
+		 objForm.password.focus();
+		 return false;
+		 }
+	return true;
+	}
+</script>
+</head>
+
+<style type="text/css">
+	body{
+		background-color: purple;
+		margin-left: 10%;
+		margin-right: 10%;
+		border: 2px dotted white;
+		padding: 10px 10px 10px 10px;
+		font-family: georgia;
+		}
+	</style>
+	
+<body>
+<form name="loginform" action="home page.html" method="post" onsubmit="return validateForm(this)">
+<body background="q.jpg">
+<center>
+<font color=white>UserName: <input type="text" name="username"><br></font>
+<font color=white>password: <input type="password" name="password"><br></font>
+<a href="home page.html"><input type="submit" value="Login"></a>
+<input type="reset" value="cancel">
+</center>
+</body>
+</form>
+</BODY>
+</html>
